@@ -13,7 +13,7 @@ class InsertViewModel(private val kontakRepository: KontakRepository): ViewModel
     var insertKontakState by mutableStateOf(InsertUiState())
         private set
 
-    fun updateInsertKontakState(insertUiEvent: InserUiEvent){
+    fun updateInsertKontakState(insertUiEvent: InsertUiEvent){
         insertKontakState = InsertUiState(insertUiEvent = insertUiEvent)
     }
 
@@ -30,6 +30,13 @@ class InsertViewModel(private val kontakRepository: KontakRepository): ViewModel
 
 data class InsertUiState(
     val insertUiEvent: InsertUiEvent = InsertUiEvent(),
+)
+
+data class InsertUiEvent(
+    val id: Int = 0,
+    val nama: String = "",
+    val email: String = "",
+    val nohp: String = ""
 )
 
 
