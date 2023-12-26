@@ -47,6 +47,13 @@ fun InsertUiEvent.toKontak(): Kontak = Kontak(
     telpon = nohp
 )
 
+fun Kontak.toInsertUiEvent(): InsertUiEvent = InsertUiEvent(
+    id = id,
+    nama = name,
+    email = alamat,
+    nohp = telpon
+)
+
 
 
 
