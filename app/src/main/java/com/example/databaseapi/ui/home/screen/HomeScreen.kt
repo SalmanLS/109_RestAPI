@@ -201,13 +201,14 @@ fun KontakCard(
                 Spacer(Modifier.weight(1f))
                 Icon(imageVector = Icons.Default.Phone, contentDescription = null)
                 Text(text = kontak.telpon, style = MaterialTheme.typography.titleMedium)
-
                 Spacer(Modifier.weight(1f))
                 IconButton(onClick = { onDeleteClick(kontak) }) {
                     Icon(imageVector = Icons.Default.Delete, contentDescription = null)
                 }
+
             }
             Text(text = kontak.alamat, style = MaterialTheme.typography.titleMedium)
+
         }
     }
 }
