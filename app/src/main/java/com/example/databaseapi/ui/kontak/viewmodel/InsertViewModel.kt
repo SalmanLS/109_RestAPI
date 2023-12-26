@@ -6,6 +6,7 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.example.databaseapi.model.Kontak
 import com.example.databaseapi.repository.KontakRepository
 import kotlinx.coroutines.launch
 
@@ -38,5 +39,14 @@ data class InsertUiEvent(
     val email: String = "",
     val nohp: String = ""
 )
+
+fun InsertUiEvent.toKontak(): Kontak = Kontak(
+    id = id,
+    name = nama,
+    alamat = email,
+    telpon = nohp
+)
+
+
 
 
