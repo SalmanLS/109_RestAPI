@@ -8,7 +8,7 @@ interface KontakRepository {
     /** Fetches list of Kontak from kontakAPI */
     suspend fun getKontak(): List<Kontak>
 
-    suspend fun inserKontak(kontak: Kontak)
+    suspend fun insertKontak(kontak: Kontak)
 
     suspend fun updateKontak(id: Int, kontak: Kontak)
 
@@ -25,7 +25,7 @@ class NetworkKontakRepository(
     /**Fetches list of Kontak from kontakAPI*/
     override suspend fun getKontak(): List<Kontak> = kontakApiService.getKontak()
 
-    override suspend fun inserKontak(kontak: Kontak) = kontakApiService.insertKontak(kontak)
+    override suspend fun insertKontak(kontak: Kontak) = kontakApiService.insertKontak(kontak)
 
     override suspend fun updateKontak(id: Int, kontak: Kontak) = kontakApiService.updateKontak(id, kontak)
 

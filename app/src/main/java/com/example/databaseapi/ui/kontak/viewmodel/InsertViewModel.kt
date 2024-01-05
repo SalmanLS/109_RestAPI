@@ -21,7 +21,7 @@ class InsertViewModel(private val kontakRepository: KontakRepository): ViewModel
     suspend fun insertKontak(){
         viewModelScope.launch {
             try {
-                kontakRepository.inserKontak(insertKontakState.insertUiEvent.toKontak())
+                kontakRepository.insertKontak(insertKontakState.insertUiEvent.toKontak())
             } catch (e: Exception){
                 e.printStackTrace()
             }
